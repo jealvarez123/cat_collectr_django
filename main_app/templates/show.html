@@ -1,4 +1,5 @@
 <!-- main_app/templates/show.html -->
+{% extends 'base.html' %}
 {% load staticfiles %}
 <!DOCTYPE html>
 <html>
@@ -11,10 +12,13 @@
   <body>
     <h1>CatCollectr</h1>
 
+{% block content %}
     <h2> Name: {{ cat.name }}</h1>
     <p> Breed: {{ cat.breed }}</p>
     <p> Description: {{ cat.description }}</p>
     <p> Age: {{ cat.age }}</p>
       <a href="/">Back</a>
+{% endblock %}
+
   </body>
 </html>
